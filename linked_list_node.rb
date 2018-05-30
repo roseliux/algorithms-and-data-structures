@@ -8,10 +8,10 @@ class LinkedListNode
   end
 end
 
-first =  LinkedListNode.new(3)
-middle = LinkedListNode.new(5)
+# first =  LinkedListNode.new(3)
+# middle = LinkedListNode.new(5)
 
-first.next_node = middle
+# first.next_node = middle
 
 
-p first
+# p first
