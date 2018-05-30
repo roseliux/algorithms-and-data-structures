@@ -45,7 +45,7 @@ class LinkedList
 			@tail = nil
 		else
 		  current = @head
-		  while current.next_node != @tail
+		  until current.next_node == @tail
 		    current = current.next_node
 		  end
 		  @tail = current
