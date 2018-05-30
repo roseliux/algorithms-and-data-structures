@@ -8,8 +8,6 @@ class LinkedListNode
   end
 end
 
-
-
 first =  LinkedListNode.new(3)
 middle = LinkedListNode.new(5)
 
