@@ -60,6 +60,15 @@ class LinkedList
 		@count = 0
 	end
 
+	def find(value)
+	end
+
+	def include?(value)
+	end
+
+	def remove(value)
+	end
+
 	def print
 	  str = ''
 	  current = @head
