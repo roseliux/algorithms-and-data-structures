@@ -63,19 +63,27 @@ class LinkedList
 	def find(value)
 	end
 
-	def include?(value)
+	def remove(value)
 	end
 
-	def remove(value)
+	def include?(value)
+		each { |x| return true if value == x.value }
+		false
+	end
+	
+	def each
+	  if block_given?
+	  	current = @head
+		  until current.nil?
+		  	yield current
+		  	current = current.next_node
+		  end
+	  end
 	end
 
 	def print
 	  str = ''
-	  current = @head
-	  until current.nil?
-		str << "#{current.value.to_s} --> "
-	  	current = current.next_node
-	  end
+	  each{|x| str << "#{x.value} --> " }
 	  str << 'null'
 	  puts str
 	end
@@ -89,15 +97,22 @@ list.add_last(2)
 list.add_last(3)
 list.add_last(99)
 
-list.remove_last
-list.print
-list.remove_last
-list.print
-list.remove_last
-list.print
-list.remove_last
-list.print
-list.remove_last
-list.remove_last
-list.remove_last
-list.print
+# p list.include?(1)
+# p list.include?(3)
+# p list.include?(22)
+
+list.each { |x| p x }
+
+# list.print
+# list.remove_last
+# list.print
+# list.remove_last
+# list.print
+# list.remove_last
+# list.print
+# list.remove_last
+# list.print
+# list.remove_last
+# list.remove_last
+# list.remove_last
+# list.print
