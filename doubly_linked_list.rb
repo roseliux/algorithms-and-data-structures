@@ -68,6 +68,10 @@ module DoublyLinkedList
 			each { |x| return true if value == x.value }
 			false
 		end
+
+		def find(value)
+			each { |x| return x if value == x.value }
+	  end
 		
 		def each
 		  if block_given?

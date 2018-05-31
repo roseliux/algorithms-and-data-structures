@@ -61,6 +61,7 @@ class LinkedList
 	end
 
 	def find(value)
+		each { |x| return x if value == x.value }
 	end
 
 	def remove(value)
@@ -70,7 +71,7 @@ class LinkedList
 		each { |x| return true if value == x.value }
 		false
 	end
-	
+
 	def each
 	  if block_given?
 	  	current = @head
@@ -99,9 +100,10 @@ list.add_last(99)
 
 # p list.include?(1)
 # p list.include?(3)
-# p list.include?(22)
+p list.include?(22)
+p list.find(1)
 
-list.each { |x| p x }
+# list.each { |x| p x }
 
 # list.print
 # list.remove_last
